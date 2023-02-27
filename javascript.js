@@ -1,3 +1,4 @@
+// Function section
 let choices = ["rock", "paper", "scissors"];
 let computerScore = 0;
 let playerScore = 0;
@@ -24,11 +25,9 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("What's your choice young man ?");
         let computerSelection = getComputerChoice();
         playRound(playerSelection, computerSelection);
-    }
 
     if (computerScore > playerScore) {
         console.log("Computer are going to overtake humanity...");
@@ -37,5 +36,26 @@ function game() {
     }
 }
 
+// UI section
 
+// Vise l'endroit où on les boutons apparaîtront dans l'HTML
+const container = document.querySelector('#container');
+container.style.cssText = 'display: flex; justify-content: space-around; align-items: center; min-height: 97.5vh;'; 
 
+// ROCK
+const rockButton = document.createElement("button");
+rockButton.innerText = 'ROCK';
+rockButton.style.cssText = 'padding: 50px';
+container.appendChild(rockButton);
+
+// PAPER
+const paperButton = document.createElement('button');
+paperButton.innerText = 'PAPER';
+paperButton.style.cssText = 'padding: 50px';
+container.appendChild(paperButton);
+
+// SCISSORS
+const scissorsButton = document.createElement('button');
+scissorsButton.innerText = 'SCISSORS';
+scissorsButton.style.cssText = 'padding: 50px';
+container.appendChild(scissorsButton);
