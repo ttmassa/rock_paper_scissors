@@ -4,6 +4,7 @@
     justify-content: space-evenly; 
     align-items: center; 
     min-height: 70vh;
+    transition: all 0.35s ease;
 }
 
 #results {
@@ -16,4 +17,10 @@
     font-size: 30px;
     display: flex;
     justify-content: space-evenly;
+}
+
+.clicked {
+    border: 3px solid rgb(225, 225, 25);
+    box-shadow: 0 0 1rem #fbc400;
+    transform: scale(1.1);
 }

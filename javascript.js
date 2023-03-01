@@ -54,6 +54,8 @@ function endGame() {
     }
 }
 
+// TRANSITION
+
 // UI section
 const container = document.querySelector('#container');
 const scores = document.querySelector('#scores');
@@ -74,6 +76,7 @@ playerScoreDisplay.appendChild(score2);
 // ROCK
 const rockButton = document.createElement("button");
 rockButton.classList.add('rockBtn');
+rockButton.classList.add('btn');
 rockButton.innerText = 'ROCK';
 rockButton.style.cssText = 'padding: 50px';
 container.appendChild(rockButton);
@@ -81,6 +84,7 @@ container.appendChild(rockButton);
 // PAPER
 const paperButton = document.createElement('button');
 paperButton.classList.add('paperBtn');
+paperButton.classList.add('btn');
 paperButton.innerText = 'PAPER';
 paperButton.style.cssText = 'padding: 50px';
 container.appendChild(paperButton);
@@ -88,25 +92,41 @@ container.appendChild(paperButton);
 // SCISSORS
 const scissorsButton = document.createElement('button');
 scissorsButton.classList.add('scissorsBtn');
+scissorsButton.classList.add('btn');
 scissorsButton.innerText = 'SCISSORS';
 scissorsButton.style.cssText = 'padding: 50px';
 container.appendChild(scissorsButton);
 
 // Event listeners
 
+
 const rockBtn  = document.querySelector('.rockBtn');
 rockBtn.addEventListener('click', () => {
+    rockBtn.classList.add('clicked');
     playRound("rock", getComputerChoice());
+    setTimeout(function(){
+        rockBtn.classList.remove('clicked');
+    }, 350);
 });
 
 const paperBtn  = document.querySelector('.paperBtn');
 paperBtn.addEventListener('click', () => {
+    paperBtn.classList.add('clicked');
     playRound("paper", getComputerChoice());
+    setTimeout(function(){
+        paperBtn.classList.remove('clicked');
+    }, 350);
 });
 
 const scissorsBtn  = document.querySelector('.scissorsBtn');
 scissorsBtn.addEventListener('click', () => {
+    scissorsBtn.classList.add('clicked');
     playRound("scissors", getComputerChoice());
+    setTimeout(function(){
+        scissorsBtn.classList.remove('clicked');
+    }, 350);
 });
+
+
 
 game();
