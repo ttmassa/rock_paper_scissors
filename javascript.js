@@ -80,7 +80,7 @@ gameName.appendChild(rps);
 
 // ROCK
 const rockButton = document.createElement("img");
-rockButton.src = "./rock.png";
+rockButton.src = "https://static.thenounproject.com/png/477914-200.png";
 rockButton.classList.add('rockBtn');
 rockButton.classList.add('btn');
 rockButton.innerText = 'ROCK';
@@ -88,7 +88,7 @@ container.appendChild(rockButton);
 
 // PAPER
 const paperButton = document.createElement('img');
-paperButton.src = "./paper.png";
+paperButton.src = "https://static.thenounproject.com/png/477912-200.png";
 paperButton.classList.add('paperBtn');
 paperButton.classList.add('btn');
 paperButton.innerText = 'PAPER';
@@ -96,7 +96,7 @@ container.appendChild(paperButton);
 
 // SCISSORS
 const scissorsButton = document.createElement('img');
-scissorsButton.src = "./scissors.png";
+scissorsButton.src = "https://static.thenounproject.com/png/477919-200.png";
 scissorsButton.classList.add('scissorsBtn');
 scissorsButton.classList.add('btn');
 scissorsButton.innerText = 'SCISSORS';
