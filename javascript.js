@@ -25,14 +25,14 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === choices[1] && computerSelection === choices[2]) ||
     (playerSelection === choices[2] && computerSelection === choices[0])) {
         computerScore ++;
-        score1.textContent = 'Computer: ' + computerScore;
+        score1.textContent = 'Computer : ' + computerScore;
         computerScoreDisplay.appendChild(score1);
         result.textContent = "Computer Choose " + computerSelection + " ! Try again to beat it !";
         results.appendChild(result);
         numberOfGames++;
     } else {
         playerScore++;
-        score2.textContent = 'You..: ' + playerScore;
+        score2.textContent = 'You.. : ' + playerScore;
         playerScoreDisplay.appendChild(score2);
         result.textContent = "Nice one ! " + playerSelection + " beats " + computerSelection + " !";
         results.appendChild(result);
@@ -62,39 +62,44 @@ const scores = document.querySelector('#scores');
 const results = document.querySelector('#results');
 const computerScoreDisplay = document.querySelector('#computerScore');
 const playerScoreDisplay = document.querySelector('#playerScore');
+const gameName = document.querySelector('.gameName');
 
 const result = document.createElement('p');
-const score1 = document.createElement('p');
-const score2 = document.createElement('p');
 
-score1.textContent = 'Computer: ' + computerScore;
+const score1 = document.createElement('p');
+score1.textContent = 'Computer :  ' + computerScore;
 computerScoreDisplay.appendChild(score1);
 
-score2.textContent = 'You..: ' + playerScore;
+const score2 = document.createElement('p');
+score2.textContent = 'You.. : ' + playerScore;
 playerScoreDisplay.appendChild(score2);
 
+const rps = document.createElement('p');
+rps.textContent = 'ROCK PAPER SCISSORS';
+gameName.appendChild(rps);
+
 // ROCK
-const rockButton = document.createElement("button");
+const rockButton = document.createElement("img");
+rockButton.src = "./rock.png";
 rockButton.classList.add('rockBtn');
 rockButton.classList.add('btn');
 rockButton.innerText = 'ROCK';
-rockButton.style.cssText = 'padding: 50px';
 container.appendChild(rockButton);
 
 // PAPER
-const paperButton = document.createElement('button');
+const paperButton = document.createElement('img');
+paperButton.src = "./paper.png";
 paperButton.classList.add('paperBtn');
 paperButton.classList.add('btn');
 paperButton.innerText = 'PAPER';
-paperButton.style.cssText = 'padding: 50px';
 container.appendChild(paperButton);
 
 // SCISSORS
-const scissorsButton = document.createElement('button');
+const scissorsButton = document.createElement('img');
+scissorsButton.src = "./scissors.png";
 scissorsButton.classList.add('scissorsBtn');
 scissorsButton.classList.add('btn');
 scissorsButton.innerText = 'SCISSORS';
-scissorsButton.style.cssText = 'padding: 50px';
 container.appendChild(scissorsButton);
 
 // Event listeners

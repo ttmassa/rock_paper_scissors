@@ -1,9 +1,31 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    max-height: 100%;
+}
+
+.gameName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    height: 14vh;
+    color: #fbc400;
+    font-size: 50px;
+    font-family: fantasy;
+}
+
 #container {
     margin: 0;
     display: flex; 
     justify-content: space-evenly; 
     align-items: center; 
-    min-height: 70vh;
+    min-height: 55vh;
     transition: all 0.35s ease;
 }
 
@@ -23,4 +45,14 @@
     border: 3px solid rgb(225, 225, 25);
     box-shadow: 0 0 1rem #fbc400;
     transform: scale(1.1);
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
