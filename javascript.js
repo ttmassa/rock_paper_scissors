@@ -48,10 +48,12 @@ function endGame() {
     if (computerScore > playerScore) {
         result.textContent = "Computer are going to overtake humanity...";
         result.style.cssText = 'color: red';
+        score1.style.cssText = 'color: red';
         results.appendChild(result);
     } else {
         result.textContent = "You just beat a computer, don't be too proud of yourself young man.";
         result.style.cssText = 'color: green';
+        score2.style.cssText = 'color: green';
         results.appendChild(result);
     }
 }
